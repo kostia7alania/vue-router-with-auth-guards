@@ -1,7 +1,7 @@
 
-import HelloWorld2 from '@/components/HelloWorld2'
-import HelloWorld3 from '@/components/HelloWorld3'
-import HelloWorld4 from '@/components/HelloWorld4'
+const HelloWorld2 = () => import('@/components/HelloWorld2')
+const HelloWorld3 = () => import('@/components/HelloWorld3')
+const HelloWorld4 = () => import('@/components/HelloWorld4')
 
 const testRoutes = [{
     path: '/test/:id',

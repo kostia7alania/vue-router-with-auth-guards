@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import p404 from '@/components/404'
-import failed from '@/components/failed'
 import testRoutes from './testRoutes'
+
+const HelloWorld = () => import('@/components/HelloWorld')
+const failed = () => import('@/components/failed')
+const p404 = () => import('@/components/404')
 
 Vue.use(VueRouter)
 
