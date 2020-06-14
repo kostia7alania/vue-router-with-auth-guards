@@ -14,6 +14,7 @@ const routes = [
     {
         path: '/',
         component: HelloWorld,
+        name: 'main',
         meta: {
             requiresAuth: false
         }
@@ -30,7 +31,7 @@ const routes = [
 ]
 
 
-const router = new VueRouter({
+window.router = new VueRouter({
     mode: 'history',
     routes
 })

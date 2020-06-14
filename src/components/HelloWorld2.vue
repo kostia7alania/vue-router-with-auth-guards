@@ -1,6 +1,12 @@
 <template>
   <div class="hello">
-  ID => {{ id }}
+      HelloWorld #2 => {{ id }} 
+      <br/>
+      Нужна-ли тут авторизация: {{$route.meta.requiresAuth}}
+    <hr>
+      <router-link :to="{ name: 'main', params: {id:333} }" replace>REPLACE 2</router-link>
+    <hr>
+
   <router-view />
   <router-view name="second" />
   </div>
@@ -8,7 +14,6 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
   computed: {
     id () {
       return this.$route.params.id

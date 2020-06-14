@@ -6,7 +6,6 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
   computed: {
     id () {
       return this.$route.params.id

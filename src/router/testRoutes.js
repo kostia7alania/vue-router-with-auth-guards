@@ -13,6 +13,9 @@ const testRoutes = [{
             components: {
                 default: HelloWorld3,
                 second: HelloWorld4
+            },
+            meta: {
+                requiresAuth: 1
             }
         }
     ],
