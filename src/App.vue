@@ -1,8 +1,14 @@
 <template>
   <div id="app">
     <div class="row">
-      <a href="#" @click.prevent="$router.go(-1)"> go -1</a>
+      <div>
+        <a href="#" @click.prevent="$router.go(-1)">go -1</a>
+        <br>
+        <label for="check">is auth</label>
+        <input id=check type="checkbox" v-model="isAuth">
+      </div>
       <img alt="Vue logo" src="./assets/logo.png">
+      
     </div>
     <router-view />
   </div>
@@ -11,7 +17,17 @@
 <script>
 
 export default {
-  name: 'App'
+  name: 'App',
+  computed: {
+    isAuth: {
+      get() {
+        return this.$root.isAuth
+      },
+      set (state) {
+        this.$root.isAuth = state
+      }
+    }
+  }
 }
 </script>
 

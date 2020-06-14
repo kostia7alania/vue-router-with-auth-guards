@@ -50,7 +50,7 @@ router.beforeEach((to, from, next) => {
 })
 
 function isAuthed() {
-    return true
+    return window.vueInstance.$root.isAuth
 }
 
 export default router
